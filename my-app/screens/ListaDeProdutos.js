@@ -59,7 +59,7 @@ export default function ListaDeProdutoScreen({ navigation, route }) {
               key={indice}
               bottomDivider
               onPress={() =>
-                navigation.navigate("AlterarDados", {
+                navigation.navigate("AlteracaoEExclusaoDeProdutos", {
                   nomeproduto: linha.nomeproduto,
                   armazenamento: linha.armazenamento,
                   valor: linha.valor,

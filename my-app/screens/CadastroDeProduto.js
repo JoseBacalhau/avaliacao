@@ -50,7 +50,7 @@ export default function CadastroDeProdutoScreen({ navigation, route }) {
       <Button
         title={"Salvar"}
         onPress={() => {
-          navigation.navigate("ListaDeProduto"),
+          inserirDados(), navigation.navigate("ListaDeProduto"),
             showMessage({
               message: "Criação de Produto",
               description: "Produto criado com Sucesso",
