@@ -65,17 +65,6 @@ export default function CadastroDeProdutoScreen({ navigation, route }) {
           marginVertical: 10,
         }}
       />
-      {/* <Button
-        title={"Voltar"}
-        onPress={() => navigation.navigate("Login")}
-        buttonStyle={{ backgroundColor: "rgba(78, 116, 289, 1)" }}
-        containerStyle={{
-          height: 40,
-          width: 200,
-          marginHorizontal: 50,
-          marginVertical: 10,
-        }}
-      /> */}
     </View>
   );
 }

@@ -50,11 +50,11 @@ export default function CadastroDeUsuarioScreen({ navigation, route }) {
       ></TextInput>
       <Button
         title={"Salvar"}
-        onPress={() => { 
+        onPress={() => { inserirDados(),
           navigation.navigate("Login"),
             showMessage({
-              message: "Criação de Produto",
-              description: "Produto criado com Sucesso",
+              message: "Criação de Usuário",
+              description: "Usuário criado com Sucesso",
               type: "success",
             });
         }}

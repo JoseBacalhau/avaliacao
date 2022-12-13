@@ -25,13 +25,11 @@ export default function LoginScreen({ navigation }) {
       <Input style={{ borderColor: "black", borderWidth: 1,  alignItems: "center" }} secureTextEntry></Input>
       <Button
         title={"Login"}
-        // onPress={()=> {
-        //   if(email & senha === login){
-        //     return(
-              
-        //     )
-        // }}}
-        onPress={() => {navigation.navigate("ListaDeProduto")}}
+        onPress={() => {navigation.navigate("ListaDeProduto"), showMessage({
+          message: "Login",
+          description: "Login efetuado com Sucesso",
+          type: "success",
+        });}}
         buttonStyle={{ backgroundColor: "rgba(78, 116, 289, 1)" }}
         containerStyle={{
           height: 40,
@@ -42,11 +40,7 @@ export default function LoginScreen({ navigation }) {
       />
       <Button
         title={"Cadastro"}
-        onPress={() => {navigation.navigate("CadastroDeUsuario"), showMessage({
-          message: "Hello World",
-          description: "This is our second message",
-          type: "success",
-        });}}
+        onPress={() => {navigation.navigate("CadastroDeUsuario")}}
         buttonStyle={{ backgroundColor: "rgba(214, 61, 57, 1)" }}
         containerStyle={{
           height: 40,
@@ -55,21 +49,6 @@ export default function LoginScreen({ navigation }) {
           marginVertical: 10,
         }}
       />
-      {/* <Button 
-      title={"Teste"}
-      onPress={() => {
-          showMessage({
-            message: "Hello World",
-            description: "This is our second message",
-            type: "success",
-          });}}
-          buttonStyle={{ backgroundColor: "rgba(214, 61, 57, 1)" }}
-        containerStyle={{
-          height: 40,
-          width: 200,
-          marginHorizontal: 50,
-          marginVertical: 10,
-        }}></Button> */}
     </View>
   );
 }

@@ -41,15 +41,11 @@ export default function AlteracaoEExclusaoDeProdutosScreen({ navigation, route }
       .catch(function (error) {
         console.log(error);
       });
-    // navigation.navigate("ListaDeProdutos")
     }
 
     function ExcluirDados() {
       axios
         .delete("http://192.168.2.124:5000/produto/"+getid, {
-          // nomeproduto: getnomeproduto,
-          // armazenamento: getarmazenamento,
-          // valor: getvalor,
           id: getid
         })
         .then(function (response) {
@@ -58,7 +54,6 @@ export default function AlteracaoEExclusaoDeProdutosScreen({ navigation, route }
         .catch(function (error) {
           console.log(error);
         });
-      // navigation.navigate("ListaDeProdutos")
       }
 
   return (
@@ -85,8 +80,8 @@ export default function AlteracaoEExclusaoDeProdutosScreen({ navigation, route }
         title={"Alterar"}
         onPress={() => {alterarDados(), navigation.navigate("ListaDeProduto"),
         showMessage({
-          message: "Criação de Produto",
-          description: "Produto criado com Sucesso",
+          message: "Alteração de Produto",
+          description: "Produto alterado com Sucesso",
           type: "success",
         });}}
         buttonStyle={{ backgroundColor: "rgba(78, 116, 289, 1)" }}
@@ -101,11 +96,11 @@ export default function AlteracaoEExclusaoDeProdutosScreen({ navigation, route }
         title={"Excluir"}
         onPress={() => {ExcluirDados(),  navigation.navigate("ListaDeProduto"),
         showMessage({
-          message: "Criação de Produto",
-          description: "Produto criado com Sucesso",
+          message: "Exclusão de Produto",
+          description: "Produto excluido com Sucesso",
           type: "success",
         });}}
-        buttonStyle={{ backgroundColor: "rgba(78, 116, 289, 1)" }}
+        buttonStyle={{ backgroundColor: "rgba(214, 61, 57, 1)" }}
         containerStyle={{
           height: 40,
           width: 200,
